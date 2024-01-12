@@ -22,14 +22,14 @@ function countDown(){
     state.view.timeLeft.textContent = state.values.currentTime;
 
     if(state.values.currentTime <= 0){
-        clearInterval(state.values.countDownTimerId);
-        clearInterval(state.values.timeId);
+        clearInterval(state.actions.countDownTimerId);
+        clearInterval(state.actions.timeId);
         alert("Game Over! O seu resultado foi: " + state.values.result)
     }
 }
 
-function playSound(audioName){
-    let audio = new Audio(`src/audios/${audioName}.m4a`)
+function playSound(){
+    let audio = new Audio("src/audios/src_audios_hit.m4a")
     audio.volume = 0.1
     audio.play()
 }
@@ -54,7 +54,7 @@ function addListenerHitBox(){
                 state.values.result++
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
-                playSound("hit")
+                playSound()
             }
         });
     })
