@@ -46,3 +46,31 @@
 .menu-score h2:nth-child(2){
     margin-top: 1rem;
 }
+
+
+
+
+@media screen and (min-width: 320px) and ( max-width: 500px){
+
+    .container{
+        width: 142%;
+        height: 142vh;
+    }
+    .panel{
+        margin: auto 0;
+        /* margin-left: 9.7rem; */
+    }
+    .panel .panel-row .square{
+        height: 145px;
+        width: 145px;
+        padding-left: 5rem;
+    }
+
+    .menu, .menu-time h2, .menu-score h2, .menu-lives h2{
+        font-size: 20px;
+    }
+
+    .menu-lives{
+        margin-right: 21px;
+    }
+}
